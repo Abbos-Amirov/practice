@@ -67,3 +67,33 @@ calculate(0, 2, 300)
 print("------")
 
 calculate(5, 7)
+
+
+def introduce(**kwargs):
+    print(f"the type(**kwargs) value: {type(kwargs)}")
+    print(f"Hi, I am {kwargs['name']} and I am {kwargs['age']} years old!")
+
+
+# CALL
+introduce(name="Justin", age=28)
+introduce(name="Shawn", age=30, single=True)
+print("------")
+
+
+def greeting(*args, **kwargs):
+    print("*args >", args)
+    print("**kwargs >", kwargs)
+
+
+# CALL
+greeting("hi", True, 10, name="John", age=22)
+
+
+print("===== zip =====")
+tuple1 = (1, 2, 3, 4)
+tuple2 = ('a', 'b', 'c')
+
+zipped = zip(tuple1, tuple2)
+print("zipped:", zipped)
+result = list(zipped)
+print(f"the result: {result}")
