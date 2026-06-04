@@ -23,3 +23,12 @@ t.speed(2)
 t.circle(150)
 
 turtle.done()
+
+
+my_file = open("material/message.txt", "")
+
+try:
+    content = my_file.read()
+    print("content:", content)
+finally:
+    my_file.close()
